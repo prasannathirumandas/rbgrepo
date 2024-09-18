@@ -1,0 +1,65 @@
+package seleniumDemo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class checkBoxDemo1 {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver =new ChromeDriver();
+		driver.get("https://demos.devexpress.com/aspxeditorsdemos/ListEditors/MultiSelect.aspx");  
+
+		WebElement checkBox3G=driver.findElement(By.xpath("//span[@id='ContentHolder_lbFeatures_TG_D']"));
+		checkBox3G.click();
+		
+		
+		boolean actual=checkBox3G.isDisplayed();
+		boolean expectedcheckBox3GDisplay=true;
+		if(actual==expectedcheckBox3GDisplay)
+		{
+			System.out.println("checkBox3G is displayed");
+			
+		}
+		else
+		{
+			System.out.println("checkBox3G is not displayed");
+		}
+		boolean actualvalue=checkBox3G.isEnabled();
+		boolean expectedcheckBox3GisEnabled=true;
+		if(actual==expectedcheckBox3GisEnabled)
+		{
+			System.out.println("checkBox3G is enabled");
+		}
+		else
+		{
+			System.out.println("checkBox3G is not enabled");
+		}
+		boolean actualvalue1=checkBox3G.isSelected();
+		boolean expectedcheckBox3GisSelected=true;
+		if(actual==expectedcheckBox3GisSelected)
+		{
+			System.out.println("checkBox3G is Selected");
+			
+		}
+		else
+		{
+			System.out.println("checkBox3G is not enabled");
+
+		
+	}
+		actualvalue1 =checkBox3G.isSelected();
+		expectedcheckBox3GisSelected=true;
+		if(actualvalue1==expectedcheckBox3GisSelected)
+		{
+			System.out.println("afterclick checkbox3G selected ");
+		}
+		else
+		{
+			System.out.println("afterclick checkbox3G is not selected");
+
+	}
+}
+}
